@@ -73,7 +73,7 @@ function remove($phone_number)
 {
     global $API_KEY;
 
-    $service_url = "https://sms.comtele.com.br/api/v2/blacklist?id" . $phone_number;
+    $service_url = "https://sms.comtele.com.br/api/v2/blacklist?id=" . $phone_number;
     $headers = ["Content-Type: application/json", "auth-key: " . $API_KEY, "Content-Length: 0"];
 
     $curl = curl_init($service_url);
